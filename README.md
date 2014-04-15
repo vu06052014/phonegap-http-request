@@ -1,7 +1,7 @@
 phonegap-http-request
 =====================
 
-Installation
+###Installation
 ```bash
 $> cordova plugin add plugin.http.request
 ```
