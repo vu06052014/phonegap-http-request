@@ -25,7 +25,9 @@ httpReq.post({
 	city : "Test"
   }
 },function(err, data) {
-	/* Success then err is null
-	*/ Fail then data is null
+	/* 
+	Success then err is null
+	Fail then data is null
+	*/ 
 }); 
 ```
