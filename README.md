@@ -3,7 +3,7 @@ phonegap-http-request
 
 ###Installation
 ```bash
-$> cordova plugin add plugin.http.request
+$> cordova plugin add https://github.com/vu06052014/phonegap-http-request.git
 ```
 
 ### Create an instance
@@ -13,34 +13,18 @@ var httpReq = new plugin.HttpRequest();
 
 ### HTTP / GET request
 ```js
-httpReq.get("http://your.domain/get/", function(status, data) {
-  alert(data);
-});
-```
-
-### HTTP / GET request and JSON response
-```js
-httpReq.getJSON("http://your.domain/get/JSON/", function(status, data) {
-  alert(JSON.stringify(data));
-});
-```
-
-### HTTP / POST request
-```js
-httpReq.post("http://your.domain/post/", {
-  name: $("input[name='name']").val(),
-  email: $("input[name='email']").val()
+var httpReq = new plugin.HttpRequest();
+httpReq.post({
+  type : "post",
+  url : "http://example.com",
+  header : {
+	referer : "http://mydomain.com"
+  },
+  params : {
+	name : "Test",
+	city : "Test"
+  }
 },function(err, data) {
-  alert(data);
-});
-```
-
-### HTTP / POST request and JSON response
-```js
-httpReq.post("http://your.domain/post/JSON/", {
-  name: $("input[name='name']").val(),
-  email: $("input[name='email']").val()
-},function(err, data) {
-  alert(JSON.stringify(data));
-});
-```
+	/* Success then err is null
+	*/ Fail then data is null
+}); ```
