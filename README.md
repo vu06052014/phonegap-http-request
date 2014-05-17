@@ -1,6 +1,9 @@
 phonegap-http-request
 =====================
 
+###Supported Platform
+Android
+
 ###Installation
 ```bash
 $> cordova plugin add https://github.com/vu06052014/phonegap-http-request.git
